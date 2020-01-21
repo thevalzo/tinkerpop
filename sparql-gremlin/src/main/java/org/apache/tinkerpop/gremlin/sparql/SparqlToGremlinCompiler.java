@@ -277,7 +277,7 @@ public class SparqlToGremlinCompiler {
                 for (Expr expr : opLeftJoin.getExprs().getList()) {
                     if (expr != null) {
                         if (optionalFlag)
-                            optionalTraversals.add(__.where(WhereTraversalBuilder.transform(expr, triples)));
+                            optionalTraversals.add(WhereTraversalBuilder.transform(expr, triples));
                     }
                 }
             }
